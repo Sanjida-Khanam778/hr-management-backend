@@ -1,0 +1,47 @@
+{
+  "name": "hr-management-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "migrate:make": "knex migrate:make -x ts --knexfile src/config/knexfile.ts",
+    "migrate:latest": "knex migrate:latest --knexfile src/config/knexfile.ts",
+    "migrate:rollback": "knex migrate:rollback --knexfile src/config/knexfile.ts",
+    "seed:run": "knex seed:run --knexfile src/config/knexfile.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "joi": "^18.0.2",
+    "jsonwebtoken": "^9.0.3",
+    "knex": "^3.1.0",
+    "multer": "^2.0.2",
+    "pg": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/joi": "^17.2.2",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^25.2.2",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "nodemon": "^3.1.11",
+    "prettier": "^3.8.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
